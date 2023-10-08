@@ -1,0 +1,11 @@
+.main {
+    margin: 0 auto;
+    display: grid;
+    row-gap: 20px;
+    min-width: 320px;
+    min-height: 30vh;
+}
+
+.body {
+    margin-left: 3%;
+}

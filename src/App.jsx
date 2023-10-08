@@ -1,32 +1,29 @@
 // src/App.js
 
-import React from 'react';
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Title from './components/Title';
+import React from "react";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Header from "./components/shared/header/Header";
+import SearchPage from "./components/search/SearchPage";
+import NewRecipePage from "./components/new-recipe/NewRecipePage";
+import MyRecipesPage from "./components/my-recipes/MyRecipesPage";
 
 function App() {
   return (
-      <div>
-        <Title/>
+    <div className="main">
+      <div className='header'>
+        <Header />
       </div>
+      <BrowserRouter className='body'>
+        <Routes>
+          <Route path="/search" exact element={<SearchPage />} />
+          <Route path="/new-recipe" exact element={<NewRecipePage />} />
+          <Route path="/my-recipes" exact element={<MyRecipesPage />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
   );
 }
-
-// Friday React Activity
-/*
-1.
-let addTwoNumbers = (a, b) => a + b;
-
-2.
-let strLength = (myStr) => {
-  myStr.Legnth < 10 ? "Short" : "Long"
-}
-
-3.
-if a is greater than b: log a in console
-else: log b in console
-
-*/
 
 export default App;
