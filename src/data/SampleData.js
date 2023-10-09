@@ -8,11 +8,11 @@ export const GetHours = () => {
 
 export const GetTags = () => {
   return [
-    "Easy",
-    "Medium",
-    "Hard",
-    "Quick",
-    "Long",
+    "Difficulty: Easy",
+    "Difficulty: Medium",
+    "Difficulty: Hard",
+    "Time: Quick",
+    "Time: Long",
     "Chicken",
     "Fish",
     "Beef",
@@ -38,12 +38,13 @@ export const GetRecipes = () => {
       name: "Coconut Curry Soup",
       img: "",
       description:
-        "Cocomut Curry Soup with Chicken, Chickpeas and Hearty Greens.",
+        "Coconut Curry Soup with Chicken, Chickpeas and Hearty Greens.",
       servings: "5",
       prepTime: "10 min",
       cookTime: "35 min",
       calories: "300",
-      tags: ["Easy", "Chicken"],
+      tags: ["Difficulty: Easy", "Chicken"],
+      isSaved: true,
       ingredients: [
         {
           amount: "1 tablespoon",
@@ -120,7 +121,8 @@ export const GetRecipes = () => {
       prepTime: "5 min",
       cookTime: "30 min",
       calories: "368",
-      tags: ["Medium", "Pork", "Italian"],
+      tags: ["Difficulty: Medium", "Pork", "Italian"],
+      isSaved: true,
       ingredients: [
         {
           amount: "1 pound",
