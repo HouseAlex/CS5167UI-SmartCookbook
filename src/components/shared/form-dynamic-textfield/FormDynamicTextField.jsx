@@ -32,7 +32,7 @@ const FormDynamicTextField = ({ name, setValue, control }) => {
 
   return (
     <Controller
-      render={({ field: { onChance, ...props } }) => (
+      render={({ field: { onChange, ...props } }) => (
         <Container>
           {fields.map((field, index) => {
             return (

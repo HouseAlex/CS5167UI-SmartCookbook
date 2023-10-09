@@ -9,6 +9,7 @@ import {
   Dialog,
   DialogContent,
   DialogTitle,
+  Grid,
   IconButton,
   List,
   ListItem,
@@ -40,7 +41,9 @@ const RecipeModal = (recipe) => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>See Recipe</Button>
+      <Button onClick={handleOpen} variant="contained">
+        See Recipe
+      </Button>
       <Dialog onClose={handleClose} open={open}>
         <DialogTitle sx={{ m: 0, p: 2 }}>{data.name}</DialogTitle>
         <IconButton
@@ -57,37 +60,46 @@ const RecipeModal = (recipe) => {
         </IconButton>
         <DialogContent dividers>
           <Container>
-            <Accordion defaultExpanded={true}>
-              <AccordionSummary expandIcon={<ExpandMoreRounded />}>
-                <Typography>Ingredients</Typography>
-              </AccordionSummary>
-              <AccordionDetails>
-                <List dense={true}>
-                  {data.ingredients.map((ingredient, ingredientIndex) => {
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <Accordion defaultExpanded={true}>
+                  <AccordionSummary expandIcon={<ExpandMoreRounded />}>
+                    <Typography>Ingredients</Typography>
+                  </AccordionSummary>
+                  <AccordionDetails>
+                    <List dense={true}>
+                      {data.ingredients.map((ingredient, ingredientIndex) => {
+                        return (
+                          <ListItem key={ingredientIndex}>
+                            <ListItemText
+                              primary={ingredient.name}
+                              secondary={ingredient.amount}
+                            />
+                          </ListItem>
+                        );
+                      })}
+                    </List>
+                  </AccordionDetails>
+                </Accordion>
+              </Grid>
+              <Grid item xs={12}>
+                <Typography variant="subtitle1">Directions</Typography>
+              </Grid>
+              <Grid item xs={12}>
+                <List dense={true} sx={{ listStyle: "decimal" }}>
+                  {data.directions.map((direction, directionIndex) => {
                     return (
-                      <ListItem key={ingredientIndex}>
-                        <ListItemText
-                          primary={ingredient.name}
-                          secondary={ingredient.amount}
-                        />
+                      <ListItem
+                        key={directionIndex}
+                        sx={{ display: "list-item" }}
+                      >
+                        <ListItemText primary={direction} />
                       </ListItem>
                     );
                   })}
                 </List>
-              </AccordionDetails>
-            </Accordion>
-            <Typography variant="subtitle1">
-              Directions
-            </Typography>
-            <List dense={true} sx={{ listStyle: "decimal"}}>
-              {data.directions.map((direction, directionIndex) => {
-                return (
-                  <ListItem key={directionIndex} sx={{ display: "list-item" }}>
-                    <ListItemText primary={direction} />
-                  </ListItem>
-                );
-              })}
-            </List>
+              </Grid>
+            </Grid>
           </Container>
         </DialogContent>
       </Dialog>
