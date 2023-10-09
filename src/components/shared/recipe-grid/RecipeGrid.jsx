@@ -3,14 +3,20 @@ import {
   Accordion,
   AccordionDetails,
   AccordionSummary,
+  Button,
   Chip,
   Container,
   Grid,
   Typography,
 } from "@mui/material";
 import RecipeModal from "../recipe-modal/RecipeModal";
+import "./RecipeGrid.css"
 
 const RecipeGrid = ({ recipes }) => {
+  const Save = (value) => () => {
+    console.log("The recipe: " + value.name + " has been save to My Recipes")
+  }
+
   return (
     <Container>
       <Grid container spacing={2}>
@@ -73,8 +79,13 @@ const RecipeGrid = ({ recipes }) => {
                         <Typography>{val.calories}</Typography>
                       </Grid>
                     </Grid>
-                    <Grid item xs={12}>
+                    <Grid item xs>
                       <RecipeModal recipe={val} />
+                    </Grid>
+                    <Grid item xs={1.5}>
+                      <Button variant="contained" onClick={Save(val)}>
+                        <Favorite /> Save
+                      </Button>
                     </Grid>
                   </Grid>
                 </AccordionDetails>

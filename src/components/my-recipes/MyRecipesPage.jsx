@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import RecipeGrid from "../shared/recipe-grid/RecipeGrid";
 import { GetRecipes } from "../../data/SampleData";
 import MyRecipeGrid from "../shared/my-recipe-grid/MyRecipeGrid";
+import "./MyRecipesPage.css"
 
 function MyRecipesPage() {
   const [recipes, setRecipes] = useState([]);
