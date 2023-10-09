@@ -173,5 +173,54 @@ export const GetRecipes = () => {
         "Ladle the soup into bowls. Sprinkle with Parmesan and red pepper flakes, if desired, before serving.",
       ],
     },
+    {
+      name: "Sausage, Kale and Potato Skillet Dinner",
+      img: "",
+      description: "A little meaty, some dark leafy greens, and some starchy goodness. An easy one-pan sausage, kale and potato skillet that pleases everyone, from cook to clean-up crew.",
+      servings: "6",
+      prepTime: "10 min",
+      cookTime: "40 min",
+      calories: "212",
+      tags: ["Difficulty: Easy", "Time: Quick", "Pork"],
+      isSaved: false,
+      ingredients: [
+        {
+          amount: "3 tbsp",
+          name: "Extra-virgin olive oil",
+        },
+        {
+          amount: "24 oz",
+          name: "Red potatoes, cut in half",
+        },
+        {
+          amount: "2 tsp",
+          name: "Dried thyme",
+        },
+        {
+          amount: "6",
+          name: "Fully cooked chicken sausage links",
+        },
+        {
+          amount: "1",
+          name: "Small onion, thinly sliced",
+        },
+        {
+          amount: "1 tbsp",
+          name: "Garlic, minced",
+        },
+        {
+          amount: "1 bunch",
+          name: "Curly kale, spines removed and roughly chopped",
+        }
+      ],
+      directions: [
+        "Heat 2 tablespoons olive oil in a large 15-inch skillet over medium-high heat . Add potatoes (cut side down) and cook without stirring until they begin to turn golden brown.",
+        "Stir and continue cooking until all sides are crispy, about 5-7 minutes. Depending on the size of your pan, you may have to do this in a few batches. Season potatoes with salt, pepper and thyme.",
+        "Add another tablespoon of olive oil and the chicken sausage to the potatoes. Cook until all sides of the sausage are crispy, about 4-5 minutes.",
+        "Once crispy, add onions and cook until just tender, stirring often, about 5 minutes.",
+        "Reduce heat to medium and add the garlic, stirring until fragrant, about one minute. Add the kale. Stir often and cooking until the kale is wilted, about 3 minutes.",
+        "Squeeze a lemon over the top of the dish and serve."
+      ],
+    },
   ];
 };

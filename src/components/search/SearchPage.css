@@ -1,3 +1,13 @@
 .tag {
     margin: .5
 }
+
+.search-button {
+    justify-content: right;
+    align-content: center;
+    min-width: none;
+}
+
+.search-page-container {
+    margin-bottom: 5%;
+}
