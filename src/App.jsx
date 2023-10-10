@@ -17,6 +17,7 @@ function App() {
       </div>
       <BrowserRouter className='body'>
         <Routes>
+          <Route path="/" exact element={<SearchPage />} />
           <Route path="/search" exact element={<SearchPage />} />
           <Route path="/new-recipe" exact element={<NewRecipePage />} />
           <Route path="/my-recipes" exact element={<MyRecipesPage />} />
